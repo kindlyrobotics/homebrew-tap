@@ -1,23 +1,21 @@
 class Ate < Formula
-  desc "FoodforThought CLI - The GitHub of robotics"
-  homepage "https://kindly.fyi/foodforthought"
-  version "0.2.7"
+  desc "Food for Thought CLI"
+  homepage "https://kindly.fyi"
+  version "0.3.0"
 
-  on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/kindlyrobotics/homebrew-tap/releases/download/v0.2.7/ate-macos-arm64"
-      sha256 "77e46cfd31964d89f5721084d3073939ba0a7a50276b3b16804a8e3f5652bdb8"
-    else
-      url "https://github.com/kindlyrobotics/homebrew-tap/releases/download/v0.2.7/ate-macos-x86_64"
-      sha256 "b9540363cb928d60f10b39295a72ed3512823f2f84edc30f5d0e877ae6628692"
-    end
+  if Hardware::CPU.arm?
+    url "https://github.com/kindlyrobotics/homebrew-tap/releases/download/v0.3.0/ate-macos-arm64"
+    sha256 "4a87e850f98bf0f2f061d77ee53309d8a3b791db8296c59ebafdd0d3d2f40e66"
+  else
+    url "https://github.com/kindlyrobotics/homebrew-tap/releases/download/v0.3.0/ate-macos-x86_64"
+    sha256 "9bb346ac74236d23ec90f17883fd17e3ba2bd0f272e2a4ea8488bf8bc70119b9"
   end
 
   def install
-    if Hardware::CPU.arm?
-       bin.install "ate-macos-arm64" => "ate"
-    else
-       bin.install "ate-macos-x86_64" => "ate"
-    end
+    bin.install "ate-macos-#{Hardware::CPU.arch}" => "ate"
+  end
+
+  test do
+    system "#{bin}/ate", "--version"
   end
 end
