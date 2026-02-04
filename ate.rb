@@ -5,10 +5,10 @@ class Ate < Formula
 
   if Hardware::CPU.arm?
     url "https://github.com/kindlyrobotics/homebrew-tap/releases/download/v0.3.3/ate-macos-arm64"
-    sha256 "013ae86782595014f77b4cb4c11e31d0b5627e6235df7448e413de98dc5f9c93"
+    sha256 "922790c7b7bdf40a63892edd2b1f909d2d43032d762886a363282bb594725a3b"
   else
     url "https://github.com/kindlyrobotics/homebrew-tap/releases/download/v0.3.3/ate-macos-x86_64"
-    sha256 "5e35523d9f9fee10ab5bec80fcb704b37ef7a3fe55e5c272347dd6e80020bc8f"
+    sha256 "ac67a2f3333a19db58dffa4d0d851c8ca021f5fdea031d45916ab48d55963c6d"
   end
 
   def install
