@@ -1,14 +1,14 @@
 class Ate < Formula
   desc "Food for Thought CLI"
   homepage "https://kindly.fyi"
-  version "0.4.0"
+  version "0.4.1"
 
   if Hardware::CPU.arm?
-    url "https://github.com/kindlyrobotics/homebrew-tap/releases/download/v0.4.0/ate-macos-arm64"
-    sha256 "b968d6c096d52faa2b7923a489394a0c214a734a8b55ced5a3b42629837e03f4"
+    url "https://github.com/kindlyrobotics/homebrew-tap/releases/download/v0.4.1/ate-macos-arm64"
+    sha256 "e1e054d19b1ab2347274740c1f587adcd723fbe3aaa2f2a74b0b9efda824fc40"
   else
-    url "https://github.com/kindlyrobotics/homebrew-tap/releases/download/v0.4.0/ate-macos-x86_64"
-    sha256 "8e5c92d3d908e72f3cf292a0ce8d972aceef2c177a56f54ea22b02e2168dee4d"
+    url "https://github.com/kindlyrobotics/homebrew-tap/releases/download/v0.4.1/ate-macos-x86_64"
+    sha256 "5fe563d324cb662d1e7436a739b98345f9f74009e970e3cfcfdc8dfa61735c15"
   end
 
   def install
